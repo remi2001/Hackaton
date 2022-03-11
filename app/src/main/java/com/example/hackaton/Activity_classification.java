@@ -39,10 +39,17 @@ public class Activity_classification extends AppCompatActivity {
         Button exempleButton=this.findViewById(R.id.boutonExemple);
 
         int produit=aff.GetProduit();
+
         invalidButton.setOnClickListener(view-> onClick(nbrInvalid));
         validButton.setOnClickListener(view-> onClick(nbrValid));
         exempleButton.setOnClickListener(view->openImageExemple());
 
+
+
+    }
+
+    private void onClickClose() {
+        finish();
     }
 
     private void openImageExemple() {
@@ -52,6 +59,9 @@ public class Activity_classification extends AppCompatActivity {
 
 
     private void onClick(int cpt) {
+        if(cpt==15){
+            finish();
+        }
         ImageView imageViewVar = (ImageView) findViewById(R.id.imageView);
         image= new int[]{R.drawable.y1, R.drawable.y2, R.drawable.y3, R.drawable.y4, R.drawable.y5, R.drawable.y6, R.drawable.y7, R.drawable.y8, R.drawable.y9, R.drawable.y10, R.drawable.y11, R.drawable.y12, R.drawable.y13, R.drawable.y14, R.drawable.y15};
         imageViewVar.setImageResource(image[numeroImage]);
