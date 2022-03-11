@@ -23,7 +23,6 @@ public class Activity_classification extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar,menu);
         MenuItem toolbarCalculer = menu.findItem(R.id.choice_button);
-        MenuItem toolbarVider = menu.findItem(R.id.home_button);
 
         //toolbarCalculer.setOnMenuItemClickListener(menuItem -> calculResultat() );
         //toolbarVider.setOnMenuItemClickListener(menuItem -> videTextView() );
@@ -36,11 +35,6 @@ public class Activity_classification extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.home_button:
-                Intent intenth = new Intent(this, MainActivity.class);
-                finish();
-                finish();
-                break;
             case R.id.choice_button:
                 Intent intent = new Intent(this, Activity_choix_produit.class);
                 finish();
