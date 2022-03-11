@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_button"
+        android:title="Enregistrer et revenir à l'accueil" />
+    <item
+        android:id="@+id/choice_button"
+        android:title="Enregistrer et aller à la page de choix" />
+
+</menu>
