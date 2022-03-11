@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class Activity_choix_produit extends AppCompatActivity {
 
+    int produitChoisi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +21,8 @@ public class Activity_choix_produit extends AppCompatActivity {
         Button clickhereButton = findViewById(R.id.button_click_here);
 
         accueilButton.setOnClickListener(view -> openhomeActivity());
-        yaourtButton.setOnClickListener(view -> openclassificationActivity());
-        bouteilleButton.setOnClickListener(view -> openclassificationActivity());
+        yaourtButton.setOnClickListener(view -> openclassificationActivity("y"));
+        bouteilleButton.setOnClickListener(view -> openclassificationActivity("b"));
         clickhereButton.setOnClickListener(view -> openfinalActivity());
     }
 
@@ -32,8 +33,12 @@ public class Activity_choix_produit extends AppCompatActivity {
     }
 
     //ouvre la page de classification
-    private void openclassificationActivity(){
+    private void openclassificationActivity(String choix){
         Intent intent = new Intent(this, Activity_classification.class);
+        if(choix=="y")
+            produitChoisi=1;
+        else
+            produitChoisi=0;
         startActivity(intent);
     }
 
@@ -41,5 +46,9 @@ public class Activity_choix_produit extends AppCompatActivity {
     private void openfinalActivity(){
         Intent intent = new Intent(this, Final_page.class);
         startActivity(intent);
+    }
+
+    public int GetProduit(){
+        return produitChoisi;
     }
 }
