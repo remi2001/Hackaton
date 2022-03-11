@@ -16,7 +16,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="185dp"
-            tools:srcCompat="@drawable/imagesbienvenueHackaton" />
+            tools:srcCompat="@drawable/imagebienvenue" />
 
         <LinearLayout
             android:layout_width="match_parent"
