@@ -84,6 +84,24 @@
                         android:backgroundTint="#2962FF"
                         android:text="C'est parti !"
                         android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#9C27B0"
+                        android:text="Comment appelle-t-on un Magicien qui fait de la magie noire avec des yaourts :"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#4A4747"
+                        android:text="Un faux-mage blanc"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -128,6 +146,24 @@
                         android:backgroundTint="#2962FF"
                         android:text="C'est parti !"
                         android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#9C27B0"
+                        android:text="Quel est le comble pour une bouteille ?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#4A4747"
+                        android:text="C'est de pousser le bouchon un peu trop loin."
+                        android:textColor="#FFFDFD"
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
