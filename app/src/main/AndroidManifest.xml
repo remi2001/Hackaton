@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hackaton">
         <activity
+            android:name=".ImageExempleActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity_classification"
             android:exported="false" />
         <activity
