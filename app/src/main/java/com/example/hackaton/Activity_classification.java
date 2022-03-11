@@ -38,11 +38,12 @@ public class Activity_classification extends AppCompatActivity {
         switch (id) {
             case R.id.home_button:
                 Intent intenth = new Intent(this, MainActivity.class);
-                startActivity(intenth);
+                finish();
+                finish();
                 break;
             case R.id.choice_button:
                 Intent intent = new Intent(this, Activity_choix_produit.class);
-                startActivity(intent);
+                finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
