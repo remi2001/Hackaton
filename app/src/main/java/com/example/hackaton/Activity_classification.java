@@ -4,19 +4,47 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import java.io.File;
 
 public class Activity_classification extends AppCompatActivity {
 
+    private ImageView imageView;
+    private int numeroImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        numeroImage=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classification);
+
+        this.imageView=this.findViewById(R.id.imageView);
+        Button validButton =this.findViewById(R.id.validButton);
+        Button invalidButton=this.findViewById(R.id.invalidButton);
+
+        invalidButton.setOnClickListener(view-> onClick());
+
+
     }
+
+    private void onClick() {
+        String chemin=""; //mettre le chemin des photos ...../yaourt_
+        chemin+=numeroImage;
+        File imgFile= new File(chemin);
+        numeroImage++;
+        Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+        this.imageView.setImageBitmap(myBitmap);
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -26,6 +54,7 @@ public class Activity_classification extends AppCompatActivity {
 
         //toolbarCalculer.setOnMenuItemClickListener(menuItem -> calculResultat() );
         //toolbarVider.setOnMenuItemClickListener(menuItem -> videTextView() );
+
         return true;
     }
 
@@ -42,4 +71,6 @@ public class Activity_classification extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
