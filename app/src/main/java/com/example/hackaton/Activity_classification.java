@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class Activity_classification extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class Activity_classification extends AppCompatActivity {
         return true;
     }
 
+    //Boutons de la toolbar
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
