@@ -13,7 +13,7 @@ public class Final_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_page);
 
-        Button Bouttonretouraccueil = findViewById(R.id.Button_final_page);
+        Button Bouttonretouraccueil = findViewById(R.id.Button_Final_Page);
         Bouttonretouraccueil.setOnClickListener(view -> revenirAccueil());
     }
 
