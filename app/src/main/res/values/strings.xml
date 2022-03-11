@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Hackaton</string>
-    <string name="il_reste_xx_photos_valuer">There are XX pictures left to evaluate.</string>
+    <string name="il_reste_xx_photos_valuer">Il reste XX photos à évaluer</string>
 </resources>
