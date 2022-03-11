@@ -1,83 +1,54 @@
 package com.example.hackaton;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.ImageView;
 
-import java.io.File;
+public class Activity_choix_produit extends AppCompatActivity {
 
-public class Activity_classification extends AppCompatActivity {
-
-    private ImageView imageView;
-    private int numeroImage;
-    private int image[];
-    Activity_choix_produit aff=new Activity_choix_produit();
-
+    int produitChoisi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        numeroImage=0;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_classification);
+        setContentView(R.layout.activity_choix_produit);
 
-        this.imageView=this.findViewById(R.id.imageView);
-        Button validButton =this.findViewById(R.id.validButton);
-        Button invalidButton=this.findViewById(R.id.invalidButton);
+        //Ajout des boutons
+        Button yaourtButton = findViewById(R.id.button_yaourt);
+        Button bouteilleButton = findViewById(R.id.button_bouteille);
+        Button accueilButton = findViewById(R.id.button_accueil);
+        Button clickhereButton = findViewById(R.id.button_click_here);
 
-        int produit=aff.GetProduit();
-        //if(produit==1)
-            //image= new int[]{R.drawable.y1, R.drawable.y2, R.drawable.y3, R.drawable.y4, R.drawable.y5, R.drawable.y6, R.drawable.y7, R.drawable.y8, R.drawable.y9, R.drawable.y10, R.drawable.y11, R.drawable.y12, R.drawable.y13, R.drawable.y14, R.drawable.y15};
-
-        invalidButton.setOnClickListener(view-> onClick(image));
-        validButton.setOnClickListener(view-> onClick(image));
-
-
+        accueilButton.setOnClickListener(view -> openhomeActivity());
+        yaourtButton.setOnClickListener(view -> openclassificationActivity("y"));
+        bouteilleButton.setOnClickListener(view -> openclassificationActivity("b"));
+        clickhereButton.setOnClickListener(view -> openfinalActivity());
     }
 
-    private void onClick(int[] tableau) {
-        ImageView imageViewVar = (ImageView) findViewById(R.id.imageView);
-        image= new int[]{R.drawable.y1, R.drawable.y2, R.drawable.y3, R.drawable.y4, R.drawable.y5, R.drawable.y6, R.drawable.y7, R.drawable.y8, R.drawable.y9, R.drawable.y10, R.drawable.y11, R.drawable.y12, R.drawable.y13, R.drawable.y14, R.drawable.y15};
-        imageViewVar.setImageResource(tableau[numeroImage]);
-        numeroImage++;
+    //ouvre la page home
+    private void openhomeActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        finish();
     }
 
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.toolbar,menu);
-        MenuItem toolbarCalculer = menu.findItem(R.id.choice_button);
-
-        //toolbarCalculer.setOnMenuItemClickListener(menuItem -> calculResultat() );
-        //toolbarVider.setOnMenuItemClickListener(menuItem -> videTextView() );
-
-        return true;
+    //ouvre la page de classification
+    private void openclassificationActivity(String choix){
+        Intent intent = new Intent(this, Activity_classification.class);
+        if(choix=="y")
+            produitChoisi=1;
+        else
+            produitChoisi=0;
+        startActivity(intent);
     }
 
-    //Boutons de la toolbar
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        switch (id) {
-            case R.id.choice_button:
-                Intent intent = new Intent(this, Activity_choix_produit.class);
-                finish();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
+    //ouvre la page finale
+    private void openfinalActivity(){
+        Intent intent = new Intent(this, Final_page.class);
+        startActivity(intent);
     }
 
-
-
+    public int GetProduit(){
+        return produitChoisi;
+    }
 }
