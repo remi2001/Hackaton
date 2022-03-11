@@ -17,12 +17,12 @@ public class Activity_choix_produit extends AppCompatActivity {
         Button yaourtButton = findViewById(R.id.button_yaourt);
         Button bouteilleButton = findViewById(R.id.button_bouteille);
         Button accueilButton = findViewById(R.id.button_accueil);
-        Button finalButton = findViewById(R.id.button_final);
+        Button clickhereButton = findViewById(R.id.button_click_here);
 
         accueilButton.setOnClickListener(view -> openhomeActivity());
         yaourtButton.setOnClickListener(view -> openclassificationActivity());
         bouteilleButton.setOnClickListener(view -> openclassificationActivity());
-        finalButton.setOnClickListener(view -> openfinalActivity());
+        clickhereButton.setOnClickListener(view -> openfinalActivity());
     }
 
     //ouvre la page home

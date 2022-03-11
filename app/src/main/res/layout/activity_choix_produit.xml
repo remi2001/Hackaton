@@ -29,7 +29,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/button_final"
+                android:id="@+id/button_click_here"
                 android:layout_width="match_parent"
                 android:layout_height="82dp"
                 android:text="Click ici !"
