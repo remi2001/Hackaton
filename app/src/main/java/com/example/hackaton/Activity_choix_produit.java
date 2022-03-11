@@ -28,7 +28,7 @@ public class Activity_choix_produit extends AppCompatActivity {
     //ouvre la page home
     private void openhomeActivity(){
         Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        finish();
     }
 
     //ouvre la page de classification
