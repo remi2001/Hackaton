@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -37,12 +38,10 @@ public class Activity_classification extends AppCompatActivity {
     }
 
     private void onClick() {
-        String chemin="../../res/drawable/y"; //mettre le chemin des photos ...../yaourt_
-        chemin+=numeroImage+".png";
-        File imgFile= new File(chemin);
+        ImageView imageViewVar = (ImageView) findViewById(R.id.imageView);
+        int [] image={R.drawable.y0,R.drawable.y1,R.drawable.y2,R.drawable.y3};
+        imageViewVar.setImageResource(image[numeroImage]);
         numeroImage++;
-        Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getPath());
-        this.imageView.setImageBitmap(myBitmap);
     }
 
 
