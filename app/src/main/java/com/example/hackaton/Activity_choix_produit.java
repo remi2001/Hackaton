@@ -17,10 +17,12 @@ public class Activity_choix_produit extends AppCompatActivity {
         Button yaourtButton = findViewById(R.id.button_yaourt);
         Button bouteilleButton = findViewById(R.id.button_bouteille);
         Button accueilButton = findViewById(R.id.button_accueil);
+        Button finalButton = findViewById(R.id.button_final);
 
         accueilButton.setOnClickListener(view -> openhomeActivity());
         yaourtButton.setOnClickListener(view -> openclassificationActivity());
         bouteilleButton.setOnClickListener(view -> openclassificationActivity());
+        finalButton.setOnClickListener(view -> openfinalActivity());
     }
 
     //ouvre la page home
@@ -32,6 +34,12 @@ public class Activity_choix_produit extends AppCompatActivity {
     //ouvre la page de classification
     private void openclassificationActivity(){
         Intent intent = new Intent(this, Activity_classification.class);
+        startActivity(intent);
+    }
+
+    //ouvre la page finale
+    private void openfinalActivity(){
+        Intent intent = new Intent(this, Final_page.class);
         startActivity(intent);
     }
 }
