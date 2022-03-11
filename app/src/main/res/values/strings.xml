@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Hackaton</string>
-    <string name="il_reste_xx_photos_valuer">Il reste XX photos à évaluer</string>
+    <string name="il_reste_xx_pots_de_yaourt_à_trier">Il reste xx pots de yaourt à trier</string>
+    <string name="bon_courage">Bon courage !!!</string>
+    <string name="trier_les_pots_de_yaourt">Trier les pots de yaourt</string>
+    <string name="trier_les_bouteilles">Trier les bouteilles</string>
+    <string name="Il_reste_XX_bouteilles_à_trier">Il reste XX bouteilles à trier</string>
+    <string name="il_reste_xx_photos_analyser">Il reste xx photos à analyser</string>
 </resources>
