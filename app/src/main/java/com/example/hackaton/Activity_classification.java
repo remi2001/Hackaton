@@ -22,7 +22,7 @@ public class Activity_classification extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        numeroImage=0;
+        numeroImage=1;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classification);
 
@@ -36,8 +36,8 @@ public class Activity_classification extends AppCompatActivity {
     }
 
     private void onClick() {
-        String chemin=""; //mettre le chemin des photos ...../yaourt_
-        chemin+=numeroImage;
+        String chemin="C:/Users/PC DPT INFO IUTA/Desktop/hackathon_data/classification_yahourt_cote/"; //mettre le chemin des photos ...../yaourt_
+        chemin+=numeroImage + ".png";
         File imgFile= new File(chemin);
         numeroImage++;
         Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
